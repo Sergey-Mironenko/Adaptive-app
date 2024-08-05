@@ -17,15 +17,14 @@ export default function CardContainer() {
         { 'p-4 grid-cols-1 grid-rows-4': onPhone },
     )}>
         <div className={classNames(
-
-           { 'row-start-1 row-end-2': onPhone },
+           { 'row-start-1 row-end-1': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
 
         <div className={classNames(
   
-            { 'row-start-2 row-end-3': onPhone },
+            { 'row-start-2 row-end-2': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
@@ -33,7 +32,7 @@ export default function CardContainer() {
         <div className={classNames(
      
             { 'row-start-2 row-end-3': onTablet },
-            { 'row-start-3 row-end-4': onPhone },
+            { 'row-start-3 row-end-3': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
@@ -41,7 +40,7 @@ export default function CardContainer() {
         <div className={classNames(
 
             { 'row-start-2 row-end-3': onTablet },
-            { 'row-start-4 row-end-5': onPhone },
+            { 'row-start-4 row-end-4': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
