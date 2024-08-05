@@ -12,30 +12,36 @@ export default function CardContainer() {
 
   return (
     <section className={classNames(
-        'p-10 grid bg-white w-full content-around grid-rows-1 grid-cols-4 gap-20 mb-10',
-        { 'p-6 grid-cols-2': onTablet },
-        { 'p-4 grid-cols-1 content-center': onPhone },
+        'p-10 grid bg-white content-around grid-rows-1 grid-cols-4 gap-20 mb-10',
+        { 'p-6 grid-cols-2 grid-rows-2': onTablet },
+        { 'p-4 grid-cols-1 grid-rows-4': onPhone },
     )}>
         <div className={classNames(
-           'row-span-1 w-20'
+
+           { 'row-start-1 row-end-2': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
 
         <div className={classNames(
-            'row-span-1 w-20'
+  
+            { 'row-start-2 row-end-3': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
 
         <div className={classNames(
-            'row-span-2 w-20'
+     
+            { 'row-start-2 row-end-3': onTablet },
+            { 'row-start-3 row-end-4': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
 
         <div className={classNames(
-            'row-span-2 w-20'
+
+            { 'row-start-2 row-end-3': onTablet },
+            { 'row-start-4 row-end-5': onPhone },
         )}>
           <Card title="sdfdsdsf" content="dfsasdfaf"/>
         </div>
