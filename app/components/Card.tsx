@@ -15,7 +15,8 @@ export const Card: React.FC<Props> = ({ title, content }) => {
 
   return (
     <div className={classNames(
-      'p-5 flex flex-col grow min-w-64 shadow-card rounded-md'
+      'p-5 flex flex-col grow min-w-56 shadow-card rounded-md',
+      { 'min-w-48': onPhone },
     )}>
       <div className={classNames(
         'w-8 h-8 rounded-full mb-5 bg-done bg-cover bg-center',
@@ -30,7 +31,7 @@ export const Card: React.FC<Props> = ({ title, content }) => {
       </div>
 
       <span className={classNames(
-        'text-gray-400 font-medium text-sm'
+        'text-gray-400 font-medium text-xs'
       )}>
         {content}
       </span>
