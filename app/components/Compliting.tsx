@@ -5,8 +5,8 @@ import classNames from "classnames";
 import { useMediaQuery } from 'react-responsive';
 
 export default function Compliting() {
-  const onTablet = useMediaQuery({ maxWidth: 1000 });
-  const onPhone = useMediaQuery({ maxWidth: 500 });
+  const onTablet = useMediaQuery({ maxWidth: 1200 });
+  const onPhone = useMediaQuery({ maxWidth: 600 });
 
   return (
     <section className={classNames(
@@ -27,10 +27,10 @@ export default function Compliting() {
       </div>
 
       <div className={classNames(
-        ''
+        'w-1/3'
       )}>
         <div className={classNames(
-            'flex gap-20 mb-10'
+            'flex justify-between gap-20 mb-10'
         )}>
           <div className={classNames(
             'text-slate-800 font-medium text-xl',

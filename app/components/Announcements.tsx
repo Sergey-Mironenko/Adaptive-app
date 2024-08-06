@@ -7,12 +7,12 @@ import { useMediaQuery } from 'react-responsive';
 import { Card } from "./Card";
 
 export default function Announcements() {
-  const onTablet = useMediaQuery({ maxWidth: 1000 });
-  const onPhone = useMediaQuery({ maxWidth: 500 });
+  const onTablet = useMediaQuery({ maxWidth: 1200 });
+  const onPhone = useMediaQuery({ maxWidth: 600 });
 
   return (
     <section className={classNames(
-      'bg-white p-10'
+      'bg-white p-10 border-b-2 border-zinc-200'
     )}>
       <h2 className={classNames(
         'mb-5'

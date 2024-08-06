@@ -5,12 +5,12 @@ import classNames from "classnames";
 import { useMediaQuery } from 'react-responsive';
 
 export default function Header() {
-  const onTablet = useMediaQuery({ maxWidth: 1000 });
-  const onPhone = useMediaQuery({ maxWidth: 500 });
+  const onTablet = useMediaQuery({ maxWidth: 1200 });
+  const onPhone = useMediaQuery({ maxWidth: 600 });
 
   return (
     <header className={classNames(
-      "flex bg-white items-center justify-between px-10 py-4 border-b-2 border-zinc-200 text-slate-500" 
+      "flex bg-white items-center justify-between px-10 py-4 border-b-2 border-zinc-200 text-slate-500 mb-10" 
     )}>
       <strong className={classNames(
         { 'text-sm': onTablet },
@@ -39,21 +39,25 @@ export default function Header() {
           )}
         </div>
 
-        <img className="object-contain" src="../../public/bell.png" alt="B" />
+        <div
+          className={classNames(
+            'w-10 h-10 bg-notifications bg-cover bg-center rounded-full',
+            { 'w-5 h-5': onTablet },
+            { 'w-3 h-3': onPhone },
+          )}
+        ></div>
 
         <div className={classNames(
           'flex gap-3 items-center',
           { 'gap-1': onTablet },
         )}>
-          <img
+          <div
             className={classNames(
-              'w-10 h-10',
+              'w-10 h-10 bg-photo bg-cover bg-center rounded-full',
               { 'w-5 h-5': onTablet },
               { 'w-3 h-3': onPhone },
             )}
-            src="../../public/photo.png"
-            alt="P"
-          ></img>
+          ></div>
 
           {!onPhone && (
             <div>Sergey</div>
